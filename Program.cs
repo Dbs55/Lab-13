@@ -130,7 +130,12 @@ bool ContainsValue(int[] numbers, int target)
     }
     return false;
 }
-bool boolIsPalindrome(string word){
+int[] arr = { 3, 4, 3, 5, 7, 3 };
+Console.WriteLine(ContainsValue(arr, 3));
+
+
+
+bool IsPalindrome(string word){
 
     string lower = word.ToLower();
     string reverse = "";
@@ -141,3 +146,4 @@ bool boolIsPalindrome(string word){
     }
     return lower == reverse;
 }
+Console.WriteLine(IsPalindrome("Шалаш"));
