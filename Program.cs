@@ -1,5 +1,6 @@
 ﻿
-// void PrintHeader() {
+// void PrintHeader()
+// {
 
 //     System.Console.WriteLine("^_^");
 //     Console.WriteLine("Лабораторная работа №13");
@@ -48,28 +49,95 @@
 //     Console.WriteLine($"Стипендия без надбавки: {CalculateScholarship(2000, 0)}");
 // }
 
- double CalculateAverageGrade(int[] grades)
+// double CalculateAverageGrade(int[] grades)
+// {
+//     int sum = 0;
+//     foreach (int grade in grades)
+//     {
+//         sum += grade;
+//     }
+//     return (double)sum / grades.Length;
+// }
+
+// int CountFives(int[] grades)
+// {
+//     int count = 0;
+//     foreach (int grade in grades)
+//     {
+//         if (grade == 5) count++;
+//     }
+//     return count;
+// }
+
+// int[] grades = { 4, 5, 3, 5, 4 };
+// double average = CalculateAverageGrade(grades);
+// int fives = CountFives(grades);
+
+// System.Console.WriteLine($"{average}, {fives}");
+
+
+// class Program
+// {
+//     static void Main()
+//     {
+//         Console.WriteLine(Add(2, 3));
+//         Console.WriteLine(Add(2.5, 3.5));
+//         Console.WriteLine(Add(2, 3, 4));
+//     }
+
+//     static int Add(int a, int b)
+//     {
+//         return a + b;
+//     }
+
+//     static double Add(double a, double b)
+//     {
+//         return a + b;
+//     }
+
+//     static int Add(int a, int b, int c)
+//     {
+//         return a + b + c;
+//     }
+// }
+// Б
+// void PrintPerson(string name, int age)
+// {
+//     Console.WriteLine($"Человек: {name}, возраст: {age}");
+// }
+// PrintPerson("Арина", 23);
+// PrintPerson("Глеб", 17);
+// PrintPerson("Савелий", 45);
+
+//Г
+
+// int FindMax(int[] numbers)
+// {
+//     int max = numbers[0];
+//     foreach (int number in numbers)
+//     {
+//         if (number > max) max = number;
+//     }
+//     return max;
+// }
+
+bool ContainsValue(int[] numbers, int target)
 {
-    int sum = 0;
-    foreach (int grade in grades)
+    foreach (int n in numbers)
     {
-        sum += grade;
-    }
-    return (double)sum / grades.Length;
-}
 
-int CountFives(int[] grades)
-{
-    int count = 0;
-    foreach (int grade in grades)
+        if (n == target) return true;
+    }
+    return false;
+}
+bool boolIsPalindrome(string word){
+
+    string lower = word.ToLower();
+    string reverse = "";
+
+    for (int i = lower.Length - 1; i >= 0; i--)
     {
-        if (grade == 5) count++;
+        reverse += lower[i];
     }
-    return count;
+    return lower == reverse;
 }
-
-int[] grades = { 4, 5, 3, 5, 4 };
-double average = CalculateAverageGrade(grades);
-int fives = CountFives(grades);
-
-System.Console.WriteLine($"{average}, {fives}");
